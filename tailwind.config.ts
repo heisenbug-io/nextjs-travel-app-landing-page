@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import { prefix } from './components/prefix';
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -30,11 +32,11 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'bg-img-1': "url('/img-1.png')",
-        'bg-img-2': "url('/img-2.png')",
-        'feature-bg': "url('/feature-bg.png')",
-        pattern: "url('/pattern.png')",
-        'pattern-2': "url('/pattern-bg.png')",
+        'bg-img-1': `url('${prefix}/img-1.png')`,
+        'bg-img-2': `url('${prefix}/img-2.png')`,
+        'feature-bg': `url('${prefix}/feature-bg.png')`,
+        'pattern': `url('${prefix}/pattern.png')`,
+        'pattern-2': `url('${prefix}/pattern-bg.png')`,
       },
       screens: {
         xs: '400px',
