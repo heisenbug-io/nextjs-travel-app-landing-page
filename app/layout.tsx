@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Travel App Landing Page",
+  title: "Travel",
   description: "Travel Website for camping and hiking",
 };
 
