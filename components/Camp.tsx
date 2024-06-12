@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { PEOPLE_URL } from "@/constants"
+import { prefix } from './prefix'
 
 interface CampProps {
     backgroundImage: string;
@@ -16,7 +17,7 @@ CampProps
             <div className="flex h-full flex-col items-start justify-between p-6 lg:px-20 lg:py-10">
                 <div className="flexCenter gap-4">
                     <div className="rounded-full bg-green-50 p-4">
-                        <Image src="/folded-map.svg" alt="map" width={28} height={28} />
+                        <Image src={`${prefix}/folded-map.svg`} alt="map" width={28} height={28} />
                     </div>
                     <div className='flex flex-col gap-1'>
                         <h4 className='bold-18 text-white'>{title}</h4>
@@ -27,7 +28,7 @@ CampProps
                 <div className='flexCenter gap-6'>
                     <span className='flex -space-x-4 overflow-hidden'>
                         {PEOPLE_URL.map((url) => (
-                            <Image key={url} src={url} alt="person" width={52} height={52} className='inline-block h-10 w-10 rounded-full' />
+                            <Image key={url} src={`${prefix}${url}`} alt="person" width={52} height={52} className='inline-block h-10 w-10 rounded-full' />
                         ))}
                     </span>
                     <p className='bold-16 md:bold-20 text-white'>
@@ -58,7 +59,7 @@ const Camp = () => {
                 <p className='regular-14 xl:regular-16 mt-5 text-white'>
                     We provide a solution for you to be able to use our application when climbing, yes offline maps you can use at any time there is no signal at the location.
                 </p>
-                <Image src="/quote.svg" alt='camp-2' width={186} height={219} className='camp-quote' />
+                <Image src={`${prefix}/quote.svg`} alt='camp-2' width={186} height={219} className='camp-quote' />
             </div>
         </div>
     </section>

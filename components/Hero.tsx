@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Button from './Button'
+import { prefix } from './prefix'
 
 const Hero = () => {
     return (
@@ -7,7 +8,7 @@ const Hero = () => {
             <div className='hero-map' />
 
             <div className='relative z-20 flex flex-1 flex-col xl:w-1/2'>
-                <Image src='/camp.svg' alt='camp' width={50} height={50} className='absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]' />
+                <Image src={`${prefix}/camp.svg`} alt='camp' width={50} height={50} className='absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]' />
                 <h1 className='bold-52 lg:bold-88'>
                     Algonquin Park Camp Area
                 </h1>
@@ -17,7 +18,7 @@ const Hero = () => {
                 <div className='my-11 flex flex-wrap gap-5'>
                     <div className='flex items-center gap-2'>
                         {Array(5).fill(1).map((_, index) => (
-                            <Image src='/star.svg' alt='star' width={24} height={24} key={index} />
+                            <Image src={`${prefix}/star.svg`} alt='star' width={24} height={24} key={index} />
                         ))}
                     </div>
                     <p className='bold-16 lg:bold-20 text-blue-70'>
@@ -41,7 +42,7 @@ const Hero = () => {
                             <p className='regular-16 text-gray-20'>
                                 Location
                             </p>
-                            <Image src="/close.svg" alt="close" width={24} height={24} />
+                            <Image src={`${prefix}/close.svg`} alt="close" width={24} height={24} />
                         </div>
                         <p className='bold-20 text-white'>Kawartha Lakes</p>
                     </div>
